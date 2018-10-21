@@ -1,1 +1,2 @@
-Flask==0.10.1
+flask==0.10.1
+connexion==1.5.3
