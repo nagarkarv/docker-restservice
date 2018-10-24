@@ -1,0 +1,1 @@
+docker build -t testrest:v1.0 .
