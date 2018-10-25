@@ -2,12 +2,15 @@ from flask import (
 	Flask,
 	render_template
 	)
-import os
+import connexion
 
 print('Starting')
 # Create the application instance
 print('Creating app instance')
-app = Flask(__name__, template_folder="templates")
+#app = Flask(__name__, template_folder="templates")
+
+app = connexion.App(__name__, specification_dir='./')
+app.add_api('swagger.yml')
 
 print('Creating default route')
 # Create a URL route in our application for "/"
